@@ -1,0 +1,32 @@
+problem#1
+
+#include<iostream>
+#include<cassert>
+using namespace std;
+int main()
+{
+	int array[5];
+	int *p=array;
+	int position,num;
+	for(int i=0; i<5; i++){
+		cout<<"Enter number in array : "<<endl;
+		cin>>num;
+		cout<<"Enter position of array : "<<endl;
+		cin>>position;
+		try
+		{
+			if(position>5 || position<0)
+			{
+				throw(p[i]);
+			}
+			else{
+				p[position]=num;
+			}
+		}
+		catch(int j){
+			cout<<"Invalid input!";
+			break;
+		}
+	}
+	return 0;
+}

@@ -1,0 +1,28 @@
+Problem#6
+
+#include<iostream>
+
+using namespace std;
+void returnString(char *arr,int a, int b){
+	
+	for(int i=a; i<=b;i++)
+	{
+		cout<<arr[i];
+	}
+}
+
+int main()
+{
+	int startIndex,stopIndex;
+	char array[15];
+	cout<<"Enter the string "<<endl;
+	cin>>array;
+	char *p=array;
+	cout<<"Enter the starting index"<<endl;
+	cin>>startIndex;
+	cout<<"Enter the stoping index"<<endl;
+	cin>>stopIndex;
+	
+	returnString(p,startIndex,stopIndex);
+	return 0;
+}

@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	char alpha='Y';
+	
+	const char *ptr1;
+	ptr1=&alpha;
+	*ptr1='Z';
+	cout<<alpha<<endl;
+	(We cannot change the value pointed by the ptr1 because it is 
+	 a pointer to constant character)
+
+
+	char * const ptr2;
+	ptr2=&alpha;
+	char bravo='M';
+	ptr2=&bravo;
+	cout<<bravo<<endl;
+	(You cannot change the pointer ptr2 but can change the 
+	 value pointed by ptr)
+
+	
+	const char * const ptr3;
+	ptr3=&alpha;
+	char bravo='M';
+	ptr3=&bravo;
+	cout<<bravo<<endl;
+	cout<<*ptr3='A';
+	(We can neither change the value pointed by the ptr3 nor the
+	 pointer ptr3 because it is a constant pointer to constant character)
+	
+	return 0;
+}
